@@ -1,7 +1,7 @@
 import random
 
 
-def generate(length, special_char=""):
+def generate(length: int, special_char: str = ""):
     num = "1234567890"
     upper = "QWERTYUIOPASDFGHJKLZXCVBNM"
     lower = "qwertyuiopasdfghjklzxcvbnm"
@@ -22,4 +22,11 @@ def generate(length, special_char=""):
     return password
 
 
-print(generate(8))
+def generate_num(length: int):
+    password = ""
+    for i in range(0, length):
+        password += str(random.randint(0, length))
+    return password
+
+
+print(generate(8, "`~!@#$%^&*()-=[]\\;\',./_+{}|:<>?\""))
