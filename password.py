@@ -27,6 +27,3 @@ def generate_num(length: int):
     for i in range(0, length):
         password += str(random.randint(0, length))
     return password
-
-
-print(generate(8, "`~!@#$%^&*()-=[]\\;\',./_+{}|:<>?\""))
